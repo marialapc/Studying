@@ -10,16 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="lesson1.css" />
+    <link rel="stylesheet" href="lesson3.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="login">
       <div class="form-container">
         <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo" />
-        <h1 class="title">Create a new password</h1>
-        <p class="subtitle">Enter a new password for your account</p>
+
         <form action="/" class="form">
+          <label for="email" class="label">Email address</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="example@example.com"
+            class="input input-email"
+          />
           <label for="password" class="label">Password</label>
           <input
             type="password"
@@ -27,19 +33,14 @@
             placeholder="*********"
             class="input input-password"
           />
-          <label for="new-password" class="label">Password</label>
-          <input
-            type="password"
-            id="new-password"
-            placeholder="*********"
-            class="input input-password"
-          />
           <input
             type="submit"
-            value="Confirm"
+            value="Log in"
             class="primary-button login-button"
           />
+          <a href="/">Forgot my password</a>
         </form>
+        <button class="secondary-button signup-button">Sign up</button>
       </div>
     </div>
   </body>
