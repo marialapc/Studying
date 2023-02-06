@@ -44,12 +44,15 @@ function toggleShopMenu() {
 // open and close product detail
 
 function openProductDetailAside(){
-  console.log('click')
   ProductDetailContainer.classList.remove('inactive')
 }
 
 function closeProductDetailAside(){
-  ProductDetailContainer.classList.add('inactive')
+  shoppingCartContainer.classList.toggle('inactive');
+  ProductDetailContainer.classList.add('inactive');
+  mobileMenu.classList.add('inactive');
+  desktopMenu.classList.add('inactive');
+  
 
 }
 
