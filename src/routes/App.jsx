@@ -12,15 +12,20 @@ import CreateAccount from "../pages/CreateAccount";
 import Checkout from "../pages/Checkout";
 import Orders from "../pages/Orders";
 import Login from '../pages/Login';
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
+
 
 const App = () => {
+	const initialState = useInitialState();
   return (
+	<AppContext.Provider value={initialState}>
     <BrowserRouter>
     	<Layout>
         	<Routes>
-         		 <Route path="/" element={<Home />} />
+         		<Route path="/" element={<Home />} />
           		<Route path="/login" element={<Login />} />
-         		 <Route path="/password-recovery" element={<PasswordRecovery />} />
+         		<Route path="/password-recovery" element={<PasswordRecovery />} />
 				<Route path="/send-email" element={<SendEmail />} />
 				<Route path="/new-password" element={<NewPassword />} />
 				<Route path="/account" element={<MyAccount/>} />
@@ -31,6 +36,7 @@ const App = () => {
         	</Routes>
       	</Layout>
     </BrowserRouter>
+	</AppContext.Provider>
   );
 };
 
