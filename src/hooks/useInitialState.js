@@ -1,24 +1,23 @@
 import { useState } from "react";
 
 const initialState = {
-    cart: [],
-}
+  cart: [],
+};
 
-const useInitialState = () =>{
-    const [state,setState] = useState(initialState);
+const useInitialState = () => {
+  const [state, setState] = useState(initialState);
 
-    const addToCart = (playload) =>{
-        setState({
-            ...state,
-            cart: [...state.cart, playload ]
-        });
+  const addToCart = (playload) => {
+    setState({
+      ...state,
+      cart: [...state.cart, playload],
+    });
+  };
 
-    };
-
-    return {
-        state,
-        addToCart
-    }
-}
+  return {
+    state,
+    addToCart,
+  };
+};
 
 export default useInitialState;
