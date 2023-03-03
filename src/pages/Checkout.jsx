@@ -6,6 +6,9 @@ import '../styles/Checkout.scss';
 const Checkout = () => {
 	return (
 		<div className="Checkout">
+			<div>
+				<Menu />
+			</div>
 			<div className="Checkout-container">
 				<h1 className="title">My order</h1>
 				<div className="Checkout-content">
